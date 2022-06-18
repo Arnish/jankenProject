@@ -1,11 +1,13 @@
 /* Pseudo
 - RNG factor of CPU
-- Take in players choice
+- Take in players choice with prompt
 - compare values to see who won
 - keep track of score, game ends at 5 points
 */
 
 function rpsGame (playerMove) {
+    let cpuScore = 0;
+    let playerScore = 0;
 
     // CPU RNG
     let randNum =  Math.floor(Math.random() * (9 - 1)) + 1;
@@ -24,9 +26,11 @@ function rpsGame (playerMove) {
 
     // outcomes
     if (compMove === rock && playerMove === scissor) {
-        return "You lost!"
+        cpuScore++;
+        return "You lost!" 
     }
     if (compMove === rock && playerMove === paper) {
+        playerScore++;
         return "You won!"
     }
     if (compMove === rock && playerMove === rock) {
@@ -34,12 +38,14 @@ function rpsGame (playerMove) {
     }
 
     if (compMove === paper && playerMove === scissor) {
+        playerScore++;
         return "You won!"
     }
     if (compMove === paper && playerMove === paper) {
         return "It's a draw!"
     }
     if (compMove === paper && playerMove === rock) {
+        cpuScore++;
         return "You lost!"
     }
 
@@ -47,9 +53,11 @@ function rpsGame (playerMove) {
         return "It's a draw!"
     }
     if (compMove === screen && playerMove === paper) {
+        cpuScore++;
         return "You lost!"
     }
     if (compMove === scissor && playerMove === rock) {
+        playerScore++;
         return "You won!"
     }
 }
