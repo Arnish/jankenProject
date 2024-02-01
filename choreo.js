@@ -48,14 +48,14 @@ function rpsGame (playerMove) {
     let playerScore = 0;
     
 
-    while (cpuScore < 3 && playerScore < 3) { // game ends when either player gets 3 points
+    while (cpuScore < 3 || playerScore < 3) { // game ends when either player gets 3 points
 
         // CPU RNG called here
         // cpuChoice();
         // console.log(compMove);
 
         let playerMove = prompt("What say you?");
-
+        playerMove = playerMove.toLowerCase();
 
         let compMove = "";
         let randNum =  Math.floor(Math.random() * (9 - 1)) + 1;
@@ -72,47 +72,49 @@ function rpsGame (playerMove) {
             compMove = "scissor";
         }
 
+        
+
         // Outcomes
         if (compMove === "rock" && playerMove === "scissor") {
             cpuScore++;
             console.log(cpuScore, playerScore);
-            console.log("You lost!");
+            console.log("CPU picked" + compMove + ", you lost!");
         }
         if (compMove === "rock" && playerMove === "paper") {
             playerScore++;
             console.log(cpuScore, playerScore);
-            console.log("You won!");
+            console.log("CPU picked" + compMove + "You won!");
         }
         if (compMove === "rock" && playerMove === "rock") {
-            console.log("It's a draw!")
+            console.log("CPU picked" + compMove + "It's a draw!")
         }
 
         if (compMove === "paper" && playerMove === "scissor") {
             playerScore++;
             console.log(cpuScore, playerScore);
-            console.log("You won!")
+            console.log("CPU picked" + compMove + "You won!")
         }
         if (compMove === "paper" && playerMove === "paper") {
-            console.log("It's a draw!")
+            console.log("CPU picked" + compMove + "It's a draw!")
         }
         if (compMove === "paper" && playerMove === "rock") {
             cpuScore++;
             console.log(cpuScore, playerScore);
-            console.log("You lost!")
+            console.log("CPU picked" + compMove + "You lost!")
         }
 
         if (compMove === "scissor" && playerMove === "scissor") {
-            console.log("It's a draw!")
+            console.log("CPU picked" + compMove + "It's a draw!")
         }
         if (compMove === "screen" && playerMove === "paper") {
             cpuScore++;
             console.log(cpuScore, playerScore);
-            console.log("You lost!")
+            console.log("CPU picked" + compMove + "You lost!")
         }
         if (compMove === "scissor" && playerMove === "rock") {
             playerScore++;
             console.log(cpuScore, playerScore);
-            console.log("You won!")
+            console.log("CPU picked" + compMove + "You won!")
         }
     }
 
