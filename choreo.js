@@ -83,38 +83,38 @@ function rpsGame (playerMove) {
         if (compMove === "rock" && playerMove === "paper") {
             playerScore++;
             console.log(cpuScore, playerScore);
-            console.log("CPU picked " + compMove + "You won!");
+            console.log("CPU picked " + compMove + ", you won!");
         }
         if (compMove === "rock" && playerMove === "rock") {
-            console.log("CPU picked " + compMove + "It's a draw!")
+            console.log("CPU picked " + compMove + ", it's a draw!")
         }
 
         if (compMove === "paper" && playerMove === "scissor") {
             playerScore++;
             console.log(cpuScore, playerScore);
-            console.log("CPU picked " + compMove + "You won!")
+            console.log("CPU picked " + compMove + ", you won!")
         }
         if (compMove === "paper" && playerMove === "paper") {
-            console.log("CPU picked " + compMove + "It's a draw!")
+            console.log("CPU picked " + compMove + ", it's a draw!")
         }
         if (compMove === "paper" && playerMove === "rock") {
             cpuScore++;
             console.log(cpuScore, playerScore);
-            console.log("CPU picked " + compMove + "You lost!")
+            console.log("CPU picked " + compMove + ", you lost!")
         }
 
         if (compMove === "scissor" && playerMove === "scissor") {
-            console.log("CPU picked " + compMove + "It's a draw!")
+            console.log("CPU picked " + compMove + ", it's a draw!")
         }
         if (compMove === "screen" && playerMove === "paper") {
             cpuScore++;
             console.log(cpuScore, playerScore);
-            console.log("CPU picked " + compMove + "You lost!")
+            console.log("CPU picked " + compMove + ", you lost!")
         }
         if (compMove === "scissor" && playerMove === "rock") {
             playerScore++;
             console.log(cpuScore, playerScore);
-            console.log("CPU picked " + compMove + "You won!")
+            console.log("CPU picked " + compMove + ", you won!")
         }
     }
 
