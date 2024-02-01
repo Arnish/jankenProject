@@ -48,7 +48,7 @@ function rpsGame (playerMove) {
     let playerScore = 0;
     
 
-    while (cpuScore < 3 || playerScore < 3) { // game ends when either player gets 3 points
+    while (cpuScore < 3 && playerScore < 3) { // game ends when either player gets 3 points
 
         // CPU RNG called here
         // cpuChoice();
