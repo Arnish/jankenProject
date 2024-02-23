@@ -89,13 +89,13 @@ function rpsGame2 (playerMove){
             console.log("CPU picked " + compMove + ", you won!")
         }
 
-        if (playerScore === 3) {
+        if (playerScore === 5) {
             console.log("You beat the CPU: " + playerScore + " to " + cpuScore);
             cpuScore = 0;  //reset player scores once theres a winner
             playerScore = 0;
         }
         
-        if(cpuScore === 3) {
+        if(cpuScore === 5) {
             console.log("You lost to the CPU: " + cpuScore + " to " + playerScore);
             cpuScore = 0;
             playerScore = 0;
