@@ -54,8 +54,8 @@ function rpsGame (playerMove) {
         // cpuChoice();
         // console.log(compMove);
 
-        let playerMove = prompt("What say you?");
-        playerMove = playerMove.toLowerCase();
+        //let playerMove = prompt("What say you?");
+        //playerMove = playerMove.toLowerCase();
 
         let compMove = "";
         let randNum =  Math.floor(Math.random() * (9 - 1)) + 1;
