@@ -81,7 +81,7 @@ function rpsGame2 (playerMove){
         if (compMove === "scissor" && playerMove === "paper") {
             cpuScore++;
             console.log(cpuScore, playerScore);
-            console.log("CPU picked " + compMove + ", you lost!")
+            console.log("CPU picked " + compMove + ", you lost!")   
         }
         if (compMove === "scissor" && playerMove === "rock") {
             playerScore++;
